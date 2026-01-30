@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ post.title }}</title>
+  </head>
+  <body>
+    <a href="{% url 'blog:post_list' %}">← Back</a>
+    <h1>{{ post.title }}</h1>
+    <p><em>By {{ post.author }}</em></p>
+    <article>
+      {{ post.article|linebreaks }}
+    </article>
+  </body>
+</html>
